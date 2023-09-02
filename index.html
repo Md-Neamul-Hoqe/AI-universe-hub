@@ -14,6 +14,15 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
 
+  <!-- Google Fonts Work Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Work+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/d7b7563d24.js" crossorigin="anonymous"></script>
+
   <!-- Customized Utilities -->
   <script>
     tailwind.config = {
@@ -34,25 +43,15 @@
       },
     };
   </script>
-
-  <!-- Google Fonts Work Sans -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Work+Sans:wght@400;500;600&display=swap"
-    rel="stylesheet">
-
-  <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/d7b7563d24.js" crossorigin="anonymous"></script>
-
 </head>
 
 <body class="font-work-sans text-base text-body">
   <header class="text-center pt-[48px] pb-4">
-    <h1 class="text-header text-[45px] font-semibold">AI Universe Hub</h1>
+    <h1 class="text-header text-4xl sm:text-[45px] font-semibold">AI Universe Hub</h1>
     <button onclick="sortData(true)" class="btn rounded-2xl bg-red-400 text-white capitalize mt-8">Sort By
       Date</button>
   </header>
-  <main class="mx-12">
+  <main class="mx-5 sm:mx-12">
     <section class="flex flex-col">
       <div id="AiHubs" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 py-10"></div>
       <button id="showAll" onclick="loadData(true)"

@@ -189,7 +189,7 @@ const showData = (data, isShowAll = false) => {
     });
     card.setAttribute(
       "class",
-      "w-96 card bg-base-100 border flex flex-col justify-between"
+      "card bg-base-100 border flex flex-col justify-between"
     );
 
     card.innerHTML = AI?.image
@@ -207,7 +207,7 @@ const showData = (data, isShowAll = false) => {
             <h2 class="card-title text-header text-[25px] font-semibold pb-4">${
               AI?.name || "Guess what it is."
             }</h2>
-            <span><i class="fa fa-calendar"></i>${
+            <span><i class="fa fa-calendar"></i> ${
               AI?.published_in || "Up coming soon"
             }</span>
         </div>

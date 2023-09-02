@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Universe Hub</title>
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+
+  <!-- Tailwind & Daisy UI CDN link -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Customized Utilities -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "header": "#111111",
+            "body": "#585858",
+          },
+        },
+        fontFamily: {
+          'work-sans': ['Work Sans', 'sans-serif'],
+          'inter': ['Inter', 'sans-serif'],
+        },
+        container: {
+          center: true,
+        },
+      },
+    };
+  </script>
+
+  <!-- Google Fonts Work Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Work+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/d7b7563d24.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="font-work-sans text-base text-body">
+  <header class="text-center pt-[48px] pb-4">
+    <h1 class="text-header text-[45px] font-semibold">AI Universe Hub</h1>
+    <button onclick="sortData(true)" class="btn rounded-2xl bg-red-400 text-white capitalize mt-8">Sort By
+      Date</button>
+  </header>
+  <main class="mx-12">
+    <section class="flex flex-col">
+      <div id="AiHubs" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 py-10"></div>
+      <button id="showAll" onclick="loadData(true)"
+        class="btn rounded-2xl bg-red-400 text-white capitalize mb-12 mx-auto hidden">See More</button>
+    </section>
+
+    <section>
+      <!-- modal -->
+      <dialog id="details" class="modal">
+        <form method="dialog" class="bg-base-100 rounded-lg w-11/12 max-w-5xl px-20 py-10 relative">
+          <div class="modal-action absolute -right-5 -top-10"><button
+              class="btn btn-sm btn-circle bg-red-500 border-red-500 text-white z-50">✕</button></div>
+          <div id="detailsContainer" class="grid grid-cols-2 justify-center gap-5">
+            <aside class="flex-1 border border-red-500 rounded-2xl p-[30px] bg-red-50"></aside>
+            <aside class="flex-1 card bg-base-100 border"></aside>
+          </div>
+        </form>
+      </dialog>
+    </section>
+  </main>
+  <footer></footer>
+
+  <script src="./js/ai-universe-hub.js"></script>
+</body>
+
+</html>
